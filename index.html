@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" placeholder="Name" id="name"><br>
+        <input type="date" id="dob"><br>
+        <div id="plus18">
+            <input type="range" name="range"  ><br>
+            <input type="email"><br>
+        </div>
+        <div id="plus25">
+            <input type="url" name="web" id="web"><br>
+        </div>
+        
+
+        <script>
+            var sec1 = document.getElementById("plus18");
+            var sec2 = document.getElementById("plus25");
+
+            sec1.style.display = "none";
+            sec2.style.display = "none";
+            var name1 = document.getElementById("name");
+            var dob = document.getElementById("dob");
+            // // console.log(name1.value);
+
+            dob.addEventListener("change",function (){
+                var date1 = dob.value;
+                // console.log(date1);
+                var age = calculate(date1);
+
+                if(age>= 18 && age<=25){
+                    sec1.style.display = "block";
+                    sec2.style.display = "none";
+                }
+                else if(age > 25 && age < 100){
+                    sec1.style.display = "block";
+                    sec2.style.display = "block";
+                }
+                else{
+                    sec1.style.display = "none";
+                    sec2.style.display = "none";
+                }
+
+            });
+
+            function calculate(dob){
+                console.log(dob);  
+                today = new Date();
+                dob1 = new Date(dob);
+
+                // today = today.getFullYear();
+                // dob1 = dob1.getFullYear();
+
+                // console.log(today);
+                // console.log(dob1.getFullYear());
+
+                var age = today.getFullYear() - dob1.getFullYear() ;
+                console.log(age);
+                return age
+            }
+        </script>
+    </body>
+</html>
