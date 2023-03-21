@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var f1=0, f2=1 ,f =0;
+            var num = prompt("Enter the Number");
+            console.log(num);
+            if(num != null && num>0){
+                document.write("<h1> Number : " +num+"</h2>");
+                console.log(num);
+                if(num==1){
+                    document.write("<h2> The Fibnocci Series is "+f1);
+                    console.log(f1,f2);
+                }
+                else if(num==2){
+                    document.write("<h2> The Fibnocci Series is "+f1+" "+f2+" </h2>");
+                    console.log(f1,f2);
+                }
+                else if(num>2){
+                    var text = "<h2> The Fibnocci Series is "+f1+" "+f2+" " ;
+                    for(var i=3;i<=num;i++){
+                        f = f1+f2;
+                        text += f+" ";
+                        f1 = f2;
+                        f2 = f;
+                    }
+                    console.log(text);
+                    document.write(text);
+                }
+            }
+            else{
+                alert("Invaild Input");
+            }
+        </script>
+    </body>
+</html>
