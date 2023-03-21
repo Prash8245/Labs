@@ -1,0 +1,38 @@
+header{
+    width: 100vw;
+    /* height: 10vh; */
+    background-color: maroon;
+    padding: 10px;
+}
+header div{
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+header nav a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+header nav{
+    text-align: center;
+}
+
+main{
+    width: 100vw;
+    height: 80%;
+    background-image: url('./Assets/jason-leung-poI7DelFiVA-unsplash.jpg');
+    text-align: center;
+    color: white;
+}
+
+main .content{
+    font-size: x-large;
+    position: relative;
+    top: 150px;
+    text-shadow: 1px 1px white;
+}
